@@ -10,3 +10,19 @@
 h1, h2, p {
   margin: 0;
 }
+
+body {
+  font-family: 'Overpass', sans-serif;
+  background-color: var(--neutral-very-dark-blue);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 87.2%;
+  max-width: 412px;
+  background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
+  border-radius: 15px;
+}
