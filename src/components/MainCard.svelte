@@ -88,8 +88,47 @@
     background-color: var(--primary-orange);
     color: var(--neutral-white);
     font-weight: 700;
-    font-size: 0.875px;
+    font-size: 0.875rem;
     line-height: 1.28;
     letter-spacing: 1.87px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .input-card-group {
+      margin-top: 32px;
+      margin-right: 32px;
+      margin-left: 32px;
+    }
+    .img-container div {
+      width: 48px;
+      height: 48px;
+    }
+    .star {
+      width: 1rem;
+      height: 1rem;
+    }
+    .description-group {
+      margin-top: 30px;
+    }
+    .heading-title {
+      font-size: 1.75rem;
+      line-height: 1.268;
+    }
+    .paragraph {
+      margin-top: 7px;
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+    .button {
+      width: 51px;
+      height: 51px;
+      font-size: 1rem;
+    }
+    .submit-button {
+      margin-top: 32px;
+      font-size: 0.9375rem;
+      line-height: 1.267;
+      letter-spacing: 2px;
+    }
   }
 </style>

@@ -2,7 +2,7 @@
   import MainCard from './components/MainCard.svelte';
   import SubmittedCard from './components/SubmittedCard.svelte';
 
-  let isSubmitted = true;
+  let isSubmitted = false;
 </script>
 
 {#if !isSubmitted}

@@ -29,6 +29,7 @@
     margin-right: auto;
   }
   .result-paragraph {
+    text-align: center;
     margin-top: 24px;
     background-color: var(--neutral-dark-blue);
     color: var(--primary-orange);
@@ -59,5 +60,35 @@
     font-size: 0.875rem;
     line-height: 1.57;
     text-align: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    .submitted-group {
+      margin-top: 45px;
+      margin-bottom: 45px;
+      margin-left: 36px;
+      margin-right: 36px;
+    }
+    .result-paragraph {
+      margin-top: 32px;
+      width: 193px;
+      font-size: 0.9375rem;
+    }
+
+    .description-group {
+      margin-top: 32px;
+    }
+    .description-group h1 {
+      color: var(--neutral-white);
+      font-size: 1.75rem;
+      line-height: 1.268;
+    }
+    .description-group p {
+      margin-top: 7px;
+      color: var(--neutral-light-grey);
+      font-size: 0.9375rem;
+      line-height: 1.6;
+      text-align: center;
+    }
   }
 </style>
