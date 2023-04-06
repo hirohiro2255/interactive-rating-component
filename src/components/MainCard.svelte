@@ -1,5 +1,19 @@
 <script>
+  import { createEventDispatcher } from 'svelte';
   import iconStar from './../images/icon-star.svg';
+
+  const dispatch = createEventDispatcher();
+
+  export let pickedNumber;
+
+  const numberOptions = [1, 2, 3, 4, 5];
+
+  function handleClick(option) {
+    dispatch('handleClick', { option });
+  }
+  function onSubmit() {
+    dispatch('handleSubmit');
+  }
 </script>
 
 <div class="input-card-group">
@@ -16,13 +30,20 @@
     </p>
   </section>
   <section class="button-container">
-    <button class="button">1</button>
-    <button class="button">2</button>
-    <button class="button">3</button>
-    <button class="button">4</button>
-    <button class="button">5</button>
+    {#each numberOptions as option}
+      <button
+        on:click={() => handleClick(option)}
+        class="button"
+        class:active={pickedNumber === option}>{option}</button
+      >
+    {/each}
   </section>
-  <button class="submit-button">SUBMIT</button>
+  <button
+    on:click={onSubmit}
+    class="submit-button"
+    disabled={pickedNumber === null}
+    class:disabled_status={pickedNumber === null}>SUBMIT</button
+  >
 </div>
 
 <style>
@@ -78,6 +99,17 @@
     text-align: center;
   }
 
+  .button:hover {
+    background-color: var(--primary-orange);
+    color: var(--neutral-white);
+    transition: 0.15s ease-in;
+  }
+
+  .active {
+    background-color: var(--neutral-medium-grey);
+    color: var(--neutral-white);
+  }
+
   .submit-button {
     margin-top: 24px;
     width: 100%;
@@ -91,6 +123,16 @@
     font-size: 0.875rem;
     line-height: 1.28;
     letter-spacing: 1.87px;
+  }
+  .submit-button:hover {
+    background-color: var(--neutral-white);
+    color: var(--primary-orange);
+    transition: 0.15s ease-in;
+  }
+
+  .disabled_status {
+    pointer-events: none;
+    opacity: 0.1;
   }
 
   @media screen and (min-width: 768px) {

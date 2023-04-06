@@ -1,12 +1,13 @@
 <script>
   import thankYouIllustration from './../images/illustration-thank-you.svg';
+  export let pickedNumber;
 </script>
 
 <div class="submitted-group">
   <section class="img-container">
     <img class="payment-img" src={thankYouIllustration} alt="thank-you-img" />
   </section>
-  <p class="result-paragraph">You selected 4 out of 5</p>
+  <p class="result-paragraph">You selected {pickedNumber} out of 5</p>
   <section class="description-group">
     <h1>Thank you!</h1>
     <p>
