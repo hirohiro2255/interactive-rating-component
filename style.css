@@ -90,7 +90,7 @@ body {
 }
 
 .number-item:hover {
-  opacity: 0.6;
+  background-color: #7c8798;
   color: white;
 }
 
@@ -110,4 +110,40 @@ body {
   border: none;
   background-color: var(--primary-orange);
   color: var(--white);
+  transition: 0.2s;
+}
+
+.submit:hover {
+  background-color: var(--white);
+  color: var(--primary-orange);
+}
+
+@media (600px <= width < 1200px) {
+}
+
+@media (1200px <= width) {
+  .card {
+    padding-top: 32px;
+  }
+
+  .primary-heading {
+    margin-top: 32px;
+  }
+
+  .detailed-paragraph {
+    margin-top: 7px;
+  }
+
+  .number-list {
+    justify-content: space-between;
+  }
+
+  .number-item {
+    width: 51px;
+    height: 51px;
+  }
+
+  .submit {
+    margin-top: 32px;
+  }
 }
