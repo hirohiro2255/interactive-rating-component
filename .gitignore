@@ -1,6 +1,10 @@
+design/
 node_modules
 elm-stuff
 .DS_Store
 dist
 dist-ssr
 *.local
+README-template.md
+preview.jpg
+style-guide.md
