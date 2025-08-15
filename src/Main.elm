@@ -20,6 +20,6 @@ main =
                 , button [ class "number-item" ] [ text "4" ]
                 , button [ class "number-item" ] [ text "5" ]
                 ]
-            , button [] [ text "SUBMIT" ]
+            , button [ class "submit" ] [ text "SUBMIT" ]
             ]
         ]

@@ -25,6 +25,7 @@ body {
   background: radial-gradient(#232a34, #181e27);
   border-radius: 30px;
   padding-top: 24px;
+  padding-bottom: 32px;
   margin-right: auto;
   margin-left: auto;
   margin-top: 154px;
@@ -85,8 +86,28 @@ body {
   letter-spacing: 0.17px;
   border: none;
   padding-top: 3px;
+  transition: 0.2s;
+}
+
+.number-item:hover {
+  opacity: 0.6;
+  color: white;
 }
 
 .number-item a {
   padding-top: 3px;
+}
+
+.submit {
+  margin-top: 24px;
+  width: 100%;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  font-size: clamp(0.875rem, 0.853rem + 0.0939vw, 0.9375rem);
+  font-weight: bolder;
+  letter-spacing: 1.87px;
+  border-radius: 22.5px;
+  border: none;
+  background-color: var(--primary-orange);
+  color: var(--white);
 }
