@@ -139,6 +139,53 @@ body {
   cursor: not-allowed;
 }
 
+.card-result {
+  width: min(87.2%, 412px);
+  min-width: 327px;
+  background: radial-gradient(#232a34, #181e27);
+  border-radius: 30px;
+  padding-top: 34px;
+  padding-bottom: 32px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 154px;
+}
+
+.card-result-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--white);
+}
+
+.thanks-img {
+  width: 144px;
+}
+
+.result {
+  color: var(--primary-orange);
+  background-color: #262e38;
+  border-radius: 22.5px;
+  margin-top: 32px;
+  padding-top: 6px;
+  padding-bottom: 4px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.thanks {
+  margin-top: 32px;
+  font-size: 1.625rem;
+}
+
+.details {
+  width: 82.5%;
+  text-align: center;
+  margin-top: 7px;
+  color: #969fad;
+  font-size: 0.9375rem;
+}
+
 @media (600px <= width < 1200px) {
 }
 

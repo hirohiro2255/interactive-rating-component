@@ -63,21 +63,47 @@ update msg model =
 
 view : Model -> Html Msg
 view model =
-    section [ class "card" ]
-        [ if not model.submitted then
-            div [ class "card-wrapper" ]
-                [ div [ class "icon-wrapper" ]
-                    [ img [ src <| VitePluginHelper.asset "/src/assets/icon-star.svg", class "star-icon" ] []
-                    ]
-                , h1 [ class "primary-heading" ] [ text "How did we do?" ]
-                , p [ class "detailed-paragraph" ] [ text "Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!" ]
-                , div [ class "number-list" ]
-                    (List.map (\n -> viewButton model.selected n) model.numbers)
-                , viewSubmitButton model.selected
-                ]
+    if not model.submitted then
+        viewForm model
 
-          else
-            div [ class "card-wrapper" ] [ text "Hi" ]
+    else
+        viewResult model
+
+
+viewResult : Model -> Html Msg
+viewResult model =
+    section [ class "card-result" ]
+        [ div [ class "card-result-wrapper" ]
+            [ img
+                [ class "thanks-img"
+                , src <| VitePluginHelper.asset "/src/assets/illustration-thank-you.svg"
+                ]
+                []
+            , case model.selected of
+                Just n ->
+                    p [ class "result" ] [ text ("You selected " ++ String.fromInt n ++ " out of 5") ]
+
+                Nothing ->
+                    p [ class "result" ] [ text "Nothing selected" ]
+            , h2 [ class "thanks" ] [ text "Thank you!" ]
+            , p [ class "details" ] [ text "We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!" ]
+            ]
+        ]
+
+
+viewForm : Model -> Html Msg
+viewForm model =
+    section [ class "card" ]
+        [ div [ class "card-wrapper" ]
+            [ div [ class "icon-wrapper" ]
+                [ img [ src <| VitePluginHelper.asset "/src/assets/icon-star.svg", class "star-icon" ] []
+                ]
+            , h1 [ class "primary-heading" ] [ text "How did we do?" ]
+            , p [ class "detailed-paragraph" ] [ text "Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!" ]
+            , div [ class "number-list" ]
+                (List.map (\n -> viewButton model.selected n) model.numbers)
+            , viewSubmitButton model.selected
+            ]
         ]
 
 
