@@ -90,8 +90,19 @@ body {
 }
 
 .number-item:hover {
+  background-color: var(--primary-orange);
+  color: white;
+}
+
+/* SELECTED */
+.selected {
   background-color: #7c8798;
   color: white;
+}
+.selected:hover {
+  background-color: #7c8798;
+  color: white;
+  opacity: 0.8;
 }
 
 .number-item a {
@@ -116,6 +127,16 @@ body {
 .submit:hover {
   background-color: var(--white);
   color: var(--primary-orange);
+}
+
+.unclickable {
+  opacity: 0.1;
+}
+
+.unclickable:hover {
+  background-color: var(--primary-orange);
+  color: var(--white);
+  cursor: not-allowed;
 }
 
 @media (600px <= width < 1200px) {
